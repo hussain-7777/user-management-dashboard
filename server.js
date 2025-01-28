@@ -3,12 +3,17 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
+// Configure CORS with specific options
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://localhost:3002'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
+app.use(express.json());
+
 // In-memory storage for users (replace with a database in production)
 let users = [];
 let nextId = 1;
-
-app.use(cors());
-app.use(express.json());
 
 // Get all users
 app.get('/users', (req, res) => {
