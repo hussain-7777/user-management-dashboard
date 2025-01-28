@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import Dashboard from './pages/Dashboard';
 import About from './pages/About';
